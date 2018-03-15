@@ -1,0 +1,6 @@
+message(STATUS "Loading cmake module: OSMesa")
+include(${CMAKE_MODULE_OSMESA_DIR}/FindOSMesa.cmake)
+if(NOT DEFINED AURORAFW_IS_BUILDING)
+	find_package(OSMesa)
+endif()
+install(FILES ${CMAKE_MODULE_OSMESA_DIR}/FindOSMesa.cmake DESTINATION share/cmake/OSMesa )
